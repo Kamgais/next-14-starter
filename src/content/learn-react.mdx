@@ -1,0 +1,29 @@
+---
+title: Learn React 18
+author: Cyril Kamgais
+---
+
+# This is a markdown file
+here is a list of items :
+
+<Newsletter/>
+- Item one
+- Item two
+- Item three
+
+
+```jsx
+"use client";
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+
+function NavLink({href, ...rest}) {
+  const pathname = usePathname();
+  const isActive = href === pathname;
+  return (
+    <Link className={isActive ? 'text-cyan-500': ''} href={href} {...rest}/>
+  )
+}
+
+export default NavLink
+```

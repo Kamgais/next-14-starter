@@ -2,4 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+}

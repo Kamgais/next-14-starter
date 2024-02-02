@@ -1,0 +1,54 @@
+---
+title: Learn PHP
+author: Cyril Kamgais
+---
+
+# This is a markdown file
+here is a list of items :
+
+<Newsletter/>
+- Item one
+- Item two
+
+
+```php
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP Form Example</title>
+</head>
+<body>
+
+<?php
+// Check if the form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Retrieve the form data
+    $name = $_POST["name"];
+    $email = $_POST["email"];
+
+    // Display a greeting message
+    echo "<h2>Hello, $name!</h2>";
+    echo "<p>Your email address is: $email</p>";
+}
+?>
+
+<h1>PHP Form Example</h1>
+
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+    <label for="name">Name:</label>
+    <input type="text" name="name" required>
+    <br>
+
+    <label for="email">Email:</label>
+    <input type="email" name="email" required>
+    <br>
+
+    <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
+
+```
